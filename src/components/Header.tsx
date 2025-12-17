@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo-new.jpeg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,6 +18,7 @@ const Header = () => {
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#services", label: "Services" },
+    { href: "#projects", label: "Projects" },
     { href: "#about", label: "About" },
     { href: "#contact", label: "Contact" },
   ];
