@@ -16,19 +16,19 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+27 00 000 0000", "+27 00 000 0001"],
-    action: "tel:+27000000000",
+    details: ["+27 73 271 8226"],
+    action: "tel:+27732718226",
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["info@masekobuilders.co.za"],
-    action: "mailto:info@masekobuilders.co.za",
+    details: ["Ishmaelmaseko022@gmail.com"],
+    action: "mailto:Ishmaelmaseko022@gmail.com",
   },
   {
     icon: MapPin,
     title: "Location",
-    details: ["Gauteng, South Africa"],
+    details: ["Western cape, South Africa"],
     action: null,
   },
   {
@@ -167,7 +167,7 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="John Doe"
+                    placeholder="enter name"
                     className="h-12"
                   />
                 </div>
@@ -185,7 +185,7 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    placeholder="john@example.com"
+                    placeholder="**@gmail.com"
                     className="h-12"
                   />
                 </div>
@@ -206,7 +206,7 @@ const ContactSection = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    placeholder="+27 00 000 0000"
+                    placeholder="+_ _ _"
                     className="h-12"
                   />
                 </div>
