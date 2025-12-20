@@ -13,7 +13,7 @@ const HeroSection = () => {
   const features = [
     { icon: Shield, text: "Quality Guaranteed" },
     { icon: Clock, text: "On-Time Delivery" },
-    { icon: Award, text: "20+ Years Experience" },
+    { icon: Award, text: "10+ Years Experience" },
   ];
 
   return (
