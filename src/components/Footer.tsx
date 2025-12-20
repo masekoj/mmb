@@ -126,10 +126,10 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                 <div className="text-sm">
                   <a
-                    href="tel:+27000000000"
+                    href="tel:+27732718226"
                     className="text-primary-foreground/80 hover:text-accent transition-colors block"
                   >
-                    +27 00 000 0000
+                    +27 73 271 8226
                   </a>
                 </div>
               </li>
@@ -139,7 +139,7 @@ const Footer = () => {
                   href="mailto:info@masekobuilders.co.za"
                   className="text-primary-foreground/80 hover:text-accent transition-colors text-sm break-all"
                 >
-                  info@masekobuilders.co.za
+                  Ishmaelmaseko022@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
