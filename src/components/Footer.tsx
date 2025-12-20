@@ -49,7 +49,7 @@ const Footer = () => {
               />
             </a>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
-              Building excellence since 2004. Your trusted partner for quality
+              Building excellence since 2013. Your trusted partner for quality
               construction and waterproofing solutions in South Africa.
             </p>
 
