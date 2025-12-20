@@ -27,7 +27,7 @@ const AboutSection = () => {
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6">
               Building <span className="text-secondary">Excellence</span> Since
-              2004
+              2013
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Maseko Master Builders and Waterproofing (PTY) LTD is a trusted
