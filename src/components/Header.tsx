@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo-new.jpeg";
+import MarqueeBar from "./MarqueeBar";
+import SocialIcons from "./SocialIcons";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,101 +34,111 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-primary shadow-lg py-2"
-          : "bg-primary/95 backdrop-blur-sm py-4"
-      }`}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a
-            href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("#home");
-            }}
-            className="flex items-center gap-3 group"
-          >
-            <img
-              src={logo}
-              alt="Maseko Master Builders Logo"
-              className="h-12 md:h-16 w-auto rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105"
-            />
-          </a>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-2">
-            {navLinks.map((link) => (
-              <Button
-                key={link.href}
-                variant="nav"
-                onClick={() => scrollToSection(link.href)}
-              >
-                {link.label}
-              </Button>
-            ))}
-          </nav>
-
-          {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Main Header */}
+      <div
+        className={`transition-all duration-300 ${
+          isScrolled
+            ? "bg-primary shadow-lg py-2"
+            : "bg-primary/95 backdrop-blur-sm py-4"
+        }`}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
             <a
-              href="tel:+27000000000"
-              className="flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground transition-colors"
+              href="#home"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("#home");
+              }}
+              className="flex items-center gap-3 group"
             >
-              <Phone className="w-4 h-4" />
-              <span className="font-medium">Call Us</span>
+              <img
+                src={logo}
+                alt="Maseko Master Builders Logo"
+                className="h-12 md:h-16 w-auto rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105"
+              />
             </a>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-2">
+              {navLinks.map((link) => (
+                <Button
+                  key={link.href}
+                  variant="nav"
+                  onClick={() => scrollToSection(link.href)}
+                >
+                  {link.label}
+                </Button>
+              ))}
+            </nav>
+
+            {/* Desktop CTA & Social */}
+            <div className="hidden lg:flex items-center gap-4">
+              <SocialIcons size="sm" variant="header" />
+              <a
+                href="tel:+27732718226"
+                className="flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="font-medium">Call Us</span>
+              </a>
+              <Button
+                variant="hero"
+                size="lg"
+                onClick={() => scrollToSection("#contact")}
+              >
+                Get Quote
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
             <Button
-              variant="hero"
-              size="lg"
-              onClick={() => scrollToSection("#contact")}
+              variant="nav"
+              size="icon"
+              className="lg:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
             >
-              Get Quote
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="nav"
-            size="icon"
-            className="lg:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
+          {/* Mobile Navigation */}
+          <div
+            className={`lg:hidden overflow-hidden transition-all duration-300 ${
+              isMenuOpen ? "max-h-[500px] opacity-100 mt-4" : "max-h-0 opacity-0"
+            }`}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </Button>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
-          }`}
-        >
-          <nav className="flex flex-col gap-1 pb-4 border-t border-primary-foreground/20 pt-4">
-            {navLinks.map((link) => (
+            <nav className="flex flex-col gap-1 pb-4 border-t border-primary-foreground/20 pt-4">
+              {navLinks.map((link) => (
+                <Button
+                  key={link.href}
+                  variant="navMobile"
+                  onClick={() => scrollToSection(link.href)}
+                >
+                  {link.label}
+                </Button>
+              ))}
+              <div className="flex items-center justify-center gap-4 mt-4 pt-4 border-t border-primary-foreground/20">
+                <SocialIcons size="md" variant="header" />
+              </div>
               <Button
-                key={link.href}
-                variant="navMobile"
-                onClick={() => scrollToSection(link.href)}
+                variant="hero"
+                size="lg"
+                className="mt-4"
+                onClick={() => scrollToSection("#contact")}
               >
-                {link.label}
+                Get Free Quote
               </Button>
-            ))}
-            <Button
-              variant="hero"
-              size="lg"
-              className="mt-4"
-              onClick={() => scrollToSection("#contact")}
-            >
-              Get Free Quote
-            </Button>
-          </nav>
+            </nav>
+          </div>
         </div>
       </div>
+
+      {/* Scrolling Marquee */}
+      <MarqueeBar />
     </header>
   );
 };
