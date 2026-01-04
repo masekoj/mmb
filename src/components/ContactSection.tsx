@@ -11,6 +11,7 @@ import {
   Send,
   CheckCircle,
 } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 const contactInfo = [
   {
@@ -83,7 +84,7 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-16" animation="fadeUp">
           <span className="inline-block px-4 py-1.5 rounded-full bg-secondary/20 text-secondary font-semibold text-sm mb-4 uppercase tracking-wide">
             Get In Touch
           </span>
@@ -94,57 +95,64 @@ const ContactSection = () => {
             Contact us today for a free consultation and quote. Our team is
             ready to bring your vision to life.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Contact Info */}
           <div className="lg:col-span-2 space-y-6">
             {contactInfo.map((item, index) => (
-              <div
+              <AnimatedSection
                 key={index}
-                className="flex gap-4 p-5 rounded-xl bg-card shadow-card"
+                animation="slideLeft"
+                delay={index * 100}
               >
-                <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-6 h-6 text-secondary" />
+                <div
+                  className="flex gap-4 p-5 rounded-xl bg-card shadow-card"
+                >
+                  <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-6 h-6 text-secondary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-foreground mb-1">
+                      {item.title}
+                    </h4>
+                    {item.details.map((detail, i) =>
+                      item.action ? (
+                        <a
+                          key={i}
+                          href={item.action}
+                          className="block text-muted-foreground hover:text-secondary transition-colors"
+                        >
+                          {detail}
+                        </a>
+                      ) : (
+                        <p key={i} className="text-muted-foreground">
+                          {detail}
+                        </p>
+                      )
+                    )}
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-1">
-                    {item.title}
-                  </h4>
-                  {item.details.map((detail, i) =>
-                    item.action ? (
-                      <a
-                        key={i}
-                        href={item.action}
-                        className="block text-muted-foreground hover:text-secondary transition-colors"
-                      >
-                        {detail}
-                      </a>
-                    ) : (
-                      <p key={i} className="text-muted-foreground">
-                        {detail}
-                      </p>
-                    )
-                  )}
-                </div>
-              </div>
+              </AnimatedSection>
             ))}
 
             {/* Trust Badge */}
-            <div className="p-6 rounded-xl bg-gradient-hero text-primary-foreground">
-              <div className="flex items-center gap-3 mb-3">
-                <CheckCircle className="w-6 h-6 text-accent" />
-                <h4 className="font-bold text-lg">Free Quote Guarantee</h4>
+            <AnimatedSection animation="scaleUp" delay={500}>
+              <div className="p-6 rounded-xl bg-gradient-hero text-primary-foreground">
+                <div className="flex items-center gap-3 mb-3">
+                  <CheckCircle className="w-6 h-6 text-accent" />
+                  <h4 className="font-bold text-lg">Free Quote Guarantee</h4>
+                </div>
+                <p className="text-primary-foreground/80 text-sm">
+                  Get a detailed, no-obligation quote within 24 hours. We believe
+                  in transparent pricing with no hidden costs.
+                </p>
               </div>
-              <p className="text-primary-foreground/80 text-sm">
-                Get a detailed, no-obligation quote within 24 hours. We believe
-                in transparent pricing with no hidden costs.
-              </p>
-            </div>
+            </AnimatedSection>
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-3">
+          <AnimatedSection className="lg:col-span-3" animation="fadeUp" delay={200}>
             <form
               onSubmit={handleSubmit}
               className="p-6 md:p-8 rounded-2xl bg-card shadow-lg"
@@ -274,7 +282,7 @@ const ContactSection = () => {
                 )}
               </Button>
             </form>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

@@ -8,15 +8,15 @@ const MarqueeBar = () => {
   ];
 
   const marqueeText = messages.join(" • ");
-  const repeatedText = `${marqueeText} • ${marqueeText} • ${marqueeText} • `;
+  const repeatedText = `${marqueeText} • ${marqueeText} • `;
 
   return (
-    <div className="bg-secondary/90 text-primary-foreground py-2 overflow-hidden">
+    <div className="bg-secondary py-1.5 overflow-hidden shadow-sm">
       <div className="flex whitespace-nowrap animate-marquee">
-        <span className="inline-block text-sm font-medium tracking-wide">
+        <span className="inline-block text-xs md:text-sm font-medium tracking-wide text-primary-foreground/95">
           {repeatedText}
         </span>
-        <span className="inline-block text-sm font-medium tracking-wide">
+        <span className="inline-block text-xs md:text-sm font-medium tracking-wide text-primary-foreground/95">
           {repeatedText}
         </span>
       </div>
