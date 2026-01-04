@@ -1,13 +1,13 @@
 import { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
+import AnimatedSection from "./AnimatedSection";
 import serviceMasonry from "@/assets/service-masonry.jpg";
 import serviceTimber from "@/assets/service-timber.jpg";
 import serviceDecking from "@/assets/service-decking.jpg";
 import serviceRoofing from "@/assets/service-roofing.jpg";
 import servicePainting from "@/assets/service-painting.jpg";
 import serviceWaterproofing from "@/assets/service-waterproofing.jpg";
-
 const projects = [
   {
     id: 1,
@@ -101,7 +101,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <AnimatedSection className="text-center mb-16" animation="fadeUp">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">
             Our Portfolio
           </span>
@@ -111,9 +111,10 @@ const ProjectsSection = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Explore our completed projects showcasing quality craftsmanship and attention to detail.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Carousel Container */}
+        <AnimatedSection animation="scaleUp" delay={200}>
         <div 
           className="relative group"
           onMouseEnter={() => setShowSwipeHint(true)}
@@ -200,6 +201,7 @@ const ProjectsSection = () => {
             Swipe →
           </div>
         </div>
+        </AnimatedSection>
 
         {/* Carousel Dots */}
         <div className="flex justify-center gap-2 mt-6">
