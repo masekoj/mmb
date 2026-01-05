@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Clock, Award } from "lucide-react";
+import { ArrowRight, Award } from "lucide-react";
 import heroImage from "@/assets/hero-construction.jpg";
+import LiveBadges from "./LiveBadges";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -9,12 +10,6 @@ const HeroSection = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  const features = [
-    { icon: Shield, text: "Quality Guaranteed" },
-    { icon: Clock, text: "On-Time Delivery" },
-    { icon: Award, text: "10+ Years Experience" },
-  ];
 
   return (
     <section
@@ -73,18 +68,8 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Feature Pills */}
-          <div className="flex flex-wrap justify-center gap-4 opacity-0 animate-fade-in animation-delay-400">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground"
-              >
-                <feature.icon className="w-4 h-4 text-accent" />
-                <span className="text-sm font-medium">{feature.text}</span>
-              </div>
-            ))}
-          </div>
+          {/* Live Feature Badges */}
+          <LiveBadges />
         </div>
       </div>
 
