@@ -5,7 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import ContactSection from "@/components/ContactSection";
+import StepFormContact from "@/components/StepFormContact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -32,7 +32,7 @@ const Index = () => {
           <ProjectsSection />
           <AboutSection />
           <TestimonialsSection />
-          <ContactSection />
+          <StepFormContact />
         </main>
         <Footer />
       </div>
