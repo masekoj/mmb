@@ -75,30 +75,30 @@ const TestimonialsSection = () => {
               delay={index * 150}
             >
               <div
-                className="relative bg-background rounded-2xl p-6 lg:p-8 shadow-lg border border-border/50 hover:shadow-xl transition-shadow duration-300 h-full"
+                className="relative bg-background rounded-2xl p-6 lg:p-8 shadow-lg border border-border/30 hover:shadow-2xl hover:scale-[1.03] hover:border-secondary/40 transition-all duration-500 ease-out h-full"
               >
                 {/* Quote Icon */}
-                <div className="absolute -top-4 left-6 w-10 h-10 rounded-full bg-gradient-hero flex items-center justify-center">
-                  <Quote className="w-5 h-5 text-primary-foreground" />
+                <div className="absolute -top-4 left-6 w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center shadow-md">
+                  <Quote className="w-6 h-6 text-primary-foreground" />
                 </div>
 
                 {/* Rating */}
-                <div className="mb-4 pt-2">
+                <div className="mb-4 pt-3">
                   <StarRating rating={testimonial.rating} />
                 </div>
 
                 {/* Testimonial Text */}
-                <p className="text-foreground/90 leading-relaxed mb-6 italic">
+                <p className="text-foreground/90 leading-relaxed mb-6 italic text-lg">
                   "{testimonial.text}"
                 </p>
 
                 {/* Author Info */}
-                <div className="flex items-center justify-between border-t border-border/50 pt-4">
+                <div className="flex items-center justify-between border-t border-border/30 pt-4">
                   <div>
                     <h4 className="font-bold text-foreground">{testimonial.name}</h4>
                     <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold">
+                  <span className="px-3 py-1.5 rounded-full bg-accent/15 text-accent text-xs font-semibold border border-accent/20">
                     {testimonial.project}
                   </span>
                 </div>

@@ -195,13 +195,13 @@ const ServicesSection = () => {
               duration={800}
             >
               <Card
-                className="group overflow-hidden border-0 shadow-card hover:shadow-lg transition-all duration-500 bg-card h-full"
+                className="group overflow-hidden border border-border/30 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.03] hover:border-secondary/40 transition-all duration-500 ease-out bg-card h-full"
               >
                 {/* Carousel */}
                 <ServiceCarousel images={service.carouselImages} title={service.title} />
 
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-secondary transition-colors">
+                <CardContent className="p-6 lg:p-8">
+                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-secondary transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">

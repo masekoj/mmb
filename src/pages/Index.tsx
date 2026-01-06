@@ -8,6 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import StepFormContact from "@/components/StepFormContact";
 import Footer from "@/components/Footer";
+import FloatingFAQButton from "@/components/FloatingFAQButton";
 
 const Index = () => {
   return (
@@ -37,6 +38,7 @@ const Index = () => {
           <StepFormContact />
         </main>
         <Footer />
+        <FloatingFAQButton />
       </div>
     </>
   );
