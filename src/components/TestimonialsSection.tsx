@@ -4,30 +4,30 @@ import AnimatedSection from "./AnimatedSection";
 const testimonials = [
   {
     name: "Thabo Mokoena",
-    location: "Johannesburg, Gauteng",
+    location: "Westen Cape, South Africa",
     rating: 5,
     text: "Maseko Master Builders exceeded our expectations with our home renovation. Their attention to detail and professionalism was outstanding. Highly recommended!",
     project: "Home Renovation",
   },
   {
     name: "Sarah van der Berg",
-    location: "Pretoria, Gauteng",
+    location: "Westen Cape, South Africa",
     rating: 5,
     text: "The waterproofing work they did on our roof was exceptional. No more leaks after 3 years! The team was punctual and cleaned up after themselves.",
     project: "Roof Waterproofing",
   },
   {
     name: "David Nkosi",
-    location: "Sandton, Gauteng",
+    location: "Westen Cape, South Africa",
     rating: 5,
     text: "Built our dream timber deck perfectly. The craftsmanship is beautiful and the wood quality is premium. Fair pricing and excellent communication throughout.",
     project: "Timber Decking",
   },
   {
     name: "Linda Mthembu",
-    location: "Centurion, Gauteng",
+    location: "Western Cape, South Africa",
     rating: 4,
-    text: "Professional masonry work on our boundary walls. The team was skilled and completed the project on time. Would definitely use them again.",
+    text: "Professional masonry work on our boundary walls. The team was skilled and completed the project on time. Would for sure use them again.",
     project: "Masonry Building",
   },
 ];

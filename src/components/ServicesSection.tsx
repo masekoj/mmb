@@ -5,25 +5,25 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 // Masonry carousel images
-import masonry1 from "@/assets/masonry-1.jpg";
-import masonry2 from "@/assets/masonry-2.jpg";
-import masonry3 from "@/assets/masonry-3.jpg";
-import masonry4 from "@/assets/masonry-4.jpg";
-import masonry5 from "@/assets/masonry-5.jpg";
+import masonry1 from "@/assets/masonry-1.jpeg";
+import masonry2 from "@/assets/masonry-2.jpeg";
+import masonry3 from "@/assets/masonry-3.jpeg";
+import masonry4 from "@/assets/masonry-4.jpeg";
+import masonry5 from "@/assets/masonry-5.jpeg";
 
 // Timber carousel images
-import timber1 from "@/assets/timber-1.jpg";
-import timber2 from "@/assets/timber-2.jpg";
-import timber3 from "@/assets/timber-3.jpg";
-import timber4 from "@/assets/timber-4.jpg";
-import timber5 from "@/assets/timber-5.jpg";
+import timber1 from "@/assets/timber-1.jpeg";
+import timber2 from "@/assets/timber-2.jpeg";
+import timber3 from "@/assets/timber-3.jpeg";
+import timber4 from "@/assets/timber-4.jpeg";
+import timber5 from "@/assets/timber-5.jpeg";
 
 // Decking carousel images
-import decking1 from "@/assets/decking-1.jpg";
-import decking2 from "@/assets/decking-2.jpg";
-import decking3 from "@/assets/decking-3.jpg";
-import decking4 from "@/assets/decking-4.jpg";
-import decking5 from "@/assets/decking-5.jpg";
+import decking1 from "@/assets/decking-1.jpeg";
+import decking2 from "@/assets/decking-2.jpeg";
+import decking3 from "@/assets/decking-3.jpeg";
+import decking4 from "@/assets/decking-4.jpeg";
+import decking5 from "@/assets/decking-5.jpeg";
 
 // Roofing carousel images
 import roofing1 from "@/assets/roofing-1.jpg";
@@ -33,11 +33,11 @@ import roofing4 from "@/assets/roofing-4.jpg";
 import roofing5 from "@/assets/roofing-5.jpg";
 
 // Painting carousel images
-import painting1 from "@/assets/painting-1.jpg";
+import painting1 from "@/assets/painting-1.jpeg";
 import painting2 from "@/assets/painting-2.jpg";
 import painting3 from "@/assets/painting-3.jpg";
-import painting4 from "@/assets/painting-4.jpg";
-import painting5 from "@/assets/painting-5.jpg";
+import painting4 from "@/assets/painting-4.jpeg";
+import painting5 from "@/assets/painting-5.jpeg";
 
 // Waterproofing carousel images
 import waterproofing1 from "@/assets/waterproofing-1.jpg";
