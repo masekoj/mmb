@@ -34,8 +34,8 @@ import roofing5 from "@/assets/roofing-5.jpg";
 
 // Painting carousel images
 import painting1 from "@/assets/painting-1.jpeg";
-import painting2 from "@/assets/painting-2.jpg";
-import painting3 from "@/assets/painting-3.jpg";
+import painting2 from "@/assets/painting-2.jpeg";
+import painting3 from "@/assets/painting-3.jpeg";
 import painting4 from "@/assets/painting-4.jpeg";
 import painting5 from "@/assets/painting-5.jpeg";
 
