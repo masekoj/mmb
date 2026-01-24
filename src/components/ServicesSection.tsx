@@ -96,11 +96,11 @@ import paving4 from "@/assets/paving-4.jpg";
 import paving5 from "@/assets/paving-5.jpg";
 
 // Plastering carousel images
-import plastering1 from "@/assets/plastering-1.jpg";
-import plastering2 from "@/assets/plastering-2.jpg";
-import plastering3 from "@/assets/plastering-3.jpg";
-import plastering4 from "@/assets/plastering-4.jpg";
-import plastering5 from "@/assets/plastering-5.jpg";
+import plastering1 from "@/assets/plastering-1.jpeg";
+import plastering2 from "@/assets/plastering-2.jpeg";
+import plastering3 from "@/assets/plastering-3.jpeg";
+import plastering4 from "@/assets/plastering-4.jpeg";
+import plastering5 from "@/assets/plastering-5.jpeg";
 
 // Tiling carousel images
 import tiling1 from "@/assets/tiling-1.jpeg";
