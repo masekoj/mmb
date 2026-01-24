@@ -103,11 +103,11 @@ import plastering4 from "@/assets/plastering-4.jpg";
 import plastering5 from "@/assets/plastering-5.jpg";
 
 // Tiling carousel images
-import tiling1 from "@/assets/tiling-1.jpg";
-import tiling2 from "@/assets/tiling-2.jpg";
-import tiling3 from "@/assets/tiling-3.jpg";
-import tiling4 from "@/assets/tiling-4.jpg";
-import tiling5 from "@/assets/tiling-5.jpg";
+import tiling1 from "@/assets/tiling-1.jpeg";
+import tiling2 from "@/assets/tiling-2.jpeg";
+import tiling3 from "@/assets/tiling-3.jpeg";
+import tiling4 from "@/assets/tiling-4.jpeg";
+import tiling5 from "@/assets/tiling-5.jpeg";
 
 const masonryImages = [masonry1, masonry2, masonry3, masonry4, masonry5];
 const timberImages = [timber1, timber2, timber3, timber4, timber5];
