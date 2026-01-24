@@ -46,12 +46,84 @@ import waterproofing3 from "@/assets/waterproofing-3.jpg";
 import waterproofing4 from "@/assets/waterproofing-4.jpg";
 import waterproofing5 from "@/assets/waterproofing-5.jpg";
 
+// Alterations carousel images
+import alterations1 from "@/assets/alterations-1.jpg";
+import alterations2 from "@/assets/alterations-2.jpg";
+import alterations3 from "@/assets/alterations-3.jpg";
+import alterations4 from "@/assets/alterations-4.jpg";
+import alterations5 from "@/assets/alterations-5.jpg";
+
+// Skimming carousel images
+import skimming1 from "@/assets/skimming-1.jpg";
+import skimming2 from "@/assets/skimming-2.jpg";
+import skimming3 from "@/assets/skimming-3.jpg";
+import skimming4 from "@/assets/skimming-4.jpg";
+import skimming5 from "@/assets/skimming-5.jpg";
+
+// Stonework carousel images
+import stonework1 from "@/assets/stonework-1.jpg";
+import stonework2 from "@/assets/stonework-2.jpg";
+import stonework3 from "@/assets/stonework-3.jpg";
+import stonework4 from "@/assets/stonework-4.jpg";
+import stonework5 from "@/assets/stonework-5.jpg";
+
+// Vinyl flooring carousel images
+import vinyl1 from "@/assets/vinyl-1.jpg";
+import vinyl2 from "@/assets/vinyl-2.jpg";
+import vinyl3 from "@/assets/vinyl-3.jpg";
+import vinyl4 from "@/assets/vinyl-4.jpg";
+import vinyl5 from "@/assets/vinyl-5.jpg";
+
+// Staircase carousel images
+import staircase1 from "@/assets/staircase-1.jpg";
+import staircase2 from "@/assets/staircase-2.jpg";
+import staircase3 from "@/assets/staircase-3.jpg";
+import staircase4 from "@/assets/staircase-4.jpg";
+import staircase5 from "@/assets/staircase-5.jpg";
+
+// Shower installation carousel images
+import shower1 from "@/assets/shower-1.jpg";
+import shower2 from "@/assets/shower-2.jpg";
+import shower3 from "@/assets/shower-3.jpg";
+import shower4 from "@/assets/shower-4.jpg";
+import shower5 from "@/assets/shower-5.jpg";
+
+// Paving carousel images
+import paving1 from "@/assets/paving-1.jpg";
+import paving2 from "@/assets/paving-2.jpg";
+import paving3 from "@/assets/paving-3.jpg";
+import paving4 from "@/assets/paving-4.jpg";
+import paving5 from "@/assets/paving-5.jpg";
+
+// Plastering carousel images
+import plastering1 from "@/assets/plastering-1.jpg";
+import plastering2 from "@/assets/plastering-2.jpg";
+import plastering3 from "@/assets/plastering-3.jpg";
+import plastering4 from "@/assets/plastering-4.jpg";
+import plastering5 from "@/assets/plastering-5.jpg";
+
+// Tiling carousel images
+import tiling1 from "@/assets/tiling-1.jpg";
+import tiling2 from "@/assets/tiling-2.jpg";
+import tiling3 from "@/assets/tiling-3.jpg";
+import tiling4 from "@/assets/tiling-4.jpg";
+import tiling5 from "@/assets/tiling-5.jpg";
+
 const masonryImages = [masonry1, masonry2, masonry3, masonry4, masonry5];
 const timberImages = [timber1, timber2, timber3, timber4, timber5];
 const deckingImages = [decking1, decking2, decking3, decking4, decking5];
 const roofingImages = [roofing1, roofing2, roofing3, roofing4, roofing5];
 const paintingImages = [painting1, painting2, painting3, painting4, painting5];
 const waterproofingImages = [waterproofing1, waterproofing2, waterproofing3, waterproofing4, waterproofing5];
+const alterationsImages = [alterations1, alterations2, alterations3, alterations4, alterations5];
+const skimmingImages = [skimming1, skimming2, skimming3, skimming4, skimming5];
+const stoneworkImages = [stonework1, stonework2, stonework3, stonework4, stonework5];
+const vinylImages = [vinyl1, vinyl2, vinyl3, vinyl4, vinyl5];
+const staircaseImages = [staircase1, staircase2, staircase3, staircase4, staircase5];
+const showerImages = [shower1, shower2, shower3, shower4, shower5];
+const pavingImages = [paving1, paving2, paving3, paving4, paving5];
+const plasteringImages = [plastering1, plastering2, plastering3, plastering4, plastering5];
+const tilingImages = [tiling1, tiling2, tiling3, tiling4, tiling5];
 
 const services = [
   {
@@ -89,6 +161,60 @@ const services = [
     description:
       "Comprehensive waterproofing solutions for roofs, walls, and foundations. Keep your property dry and protected.",
     carouselImages: waterproofingImages,
+  },
+  {
+    title: "Alterations",
+    description:
+      "Expert home alterations and extensions. Transform your existing space with quality renovations and structural modifications.",
+    carouselImages: alterationsImages,
+  },
+  {
+    title: "Skimming",
+    description:
+      "Professional wall and ceiling skimming for a smooth, flawless finish. Prepare surfaces perfectly for painting.",
+    carouselImages: skimmingImages,
+  },
+  {
+    title: "Stonework",
+    description:
+      "Beautiful natural stone installations for walls, fireplaces, and outdoor features. Timeless elegance and durability.",
+    carouselImages: stoneworkImages,
+  },
+  {
+    title: "Vinyl Flooring",
+    description:
+      "Modern luxury vinyl flooring installation. Durable, waterproof, and stylish flooring solutions for any room.",
+    carouselImages: vinylImages,
+  },
+  {
+    title: "Staircase Installation",
+    description:
+      "Custom staircase design and installation. From modern floating stairs to traditional wooden staircases.",
+    carouselImages: staircaseImages,
+  },
+  {
+    title: "Shower Installation",
+    description:
+      "Complete shower installation and bathroom renovations. Modern glass enclosures and quality fixtures.",
+    carouselImages: showerImages,
+  },
+  {
+    title: "Paving",
+    description:
+      "Professional brick paving for driveways, patios, and walkways. Beautiful, durable outdoor surfaces.",
+    carouselImages: pavingImages,
+  },
+  {
+    title: "Plastering",
+    description:
+      "Expert plastering and rendering services for interior and exterior walls. Quality finishes every time.",
+    carouselImages: plasteringImages,
+  },
+  {
+    title: "Tiling",
+    description:
+      "Professional tile installation for floors, walls, and backsplashes. Precision work with stunning results.",
+    carouselImages: tilingImages,
   },
 ];
 

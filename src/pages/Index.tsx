@@ -9,6 +9,8 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import StepFormContact from "@/components/StepFormContact";
 import Footer from "@/components/Footer";
 import FloatingFAQButton from "@/components/FloatingFAQButton";
+import ScrollToTop from "@/components/ScrollToTop";
+import FloatingContactButtons from "@/components/FloatingContactButtons";
 
 const Index = () => {
   return (
@@ -39,6 +41,8 @@ const Index = () => {
         </main>
         <Footer />
         <FloatingFAQButton />
+        <ScrollToTop />
+        <FloatingContactButtons />
       </div>
     </>
   );
