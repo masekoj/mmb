@@ -40,11 +40,11 @@ import painting4 from "@/assets/painting-4.jpeg";
 import painting5 from "@/assets/painting-5.jpeg";
 
 // Waterproofing carousel images
-import waterproofing1 from "@/assets/waterproofing-1.jpg";
-import waterproofing2 from "@/assets/waterproofing-2.jpg";
-import waterproofing3 from "@/assets/waterproofing-3.jpg";
-import waterproofing4 from "@/assets/waterproofing-4.jpg";
-import waterproofing5 from "@/assets/waterproofing-5.jpg";
+import waterproofing1 from "@/assets/waterproofing-1.jpeg";
+import waterproofing2 from "@/assets/waterproofing-2.jpeg";
+import waterproofing3 from "@/assets/waterproofing-3.jpeg";
+import waterproofing4 from "@/assets/waterproofing-4.jpeg";
+import waterproofing5 from "@/assets/waterproofing-5.jpeg";
 
 // Alterations carousel images
 import alterations1 from "@/assets/alterations-1.jpg";
@@ -61,25 +61,25 @@ import skimming4 from "@/assets/skimming-4.jpg";
 import skimming5 from "@/assets/skimming-5.jpg";
 
 // Stonework carousel images
-import stonework1 from "@/assets/stonework-1.jpg";
-import stonework2 from "@/assets/stonework-2.jpg";
-import stonework3 from "@/assets/stonework-3.jpg";
-import stonework4 from "@/assets/stonework-4.jpg";
-import stonework5 from "@/assets/stonework-5.jpg";
+import stonework1 from "@/assets/stonework-1.jpeg";
+import stonework2 from "@/assets/stonework-2.jpeg";
+import stonework3 from "@/assets/stonework-3.jpeg";
+import stonework4 from "@/assets/stonework-4.jpeg";
+import stonework5 from "@/assets/stonework-5.jpeg";
 
 // Vinyl flooring carousel images
-import vinyl1 from "@/assets/vinyl-1.jpg";
-import vinyl2 from "@/assets/vinyl-2.jpg";
-import vinyl3 from "@/assets/vinyl-3.jpg";
-import vinyl4 from "@/assets/vinyl-4.jpg";
-import vinyl5 from "@/assets/vinyl-5.jpg";
+import vinyl1 from "@/assets/vinyl-1.jpeg";
+import vinyl2 from "@/assets/vinyl-2.jpeg";
+import vinyl3 from "@/assets/vinyl-3.jpeg";
+import vinyl4 from "@/assets/vinyl-4.jpeg";
+import vinyl5 from "@/assets/vinyl-5.jpeg";
 
 // Staircase carousel images
-import staircase1 from "@/assets/staircase-1.jpg";
-import staircase2 from "@/assets/staircase-2.jpg";
-import staircase3 from "@/assets/staircase-3.jpg";
-import staircase4 from "@/assets/staircase-4.jpg";
-import staircase5 from "@/assets/staircase-5.jpg";
+import staircase1 from "@/assets/staircase-1.jpeg";
+import staircase2 from "@/assets/staircase-2.jpeg";
+import staircase3 from "@/assets/staircase-3.jpeg";
+import staircase4 from "@/assets/staircase-4.jpeg";
+import staircase5 from "@/assets/staircase-5.jpeg";
 
 // Shower installation carousel images
 import shower1 from "@/assets/shower-1.jpg";
@@ -89,11 +89,11 @@ import shower4 from "@/assets/shower-4.jpg";
 import shower5 from "@/assets/shower-5.jpg";
 
 // Paving carousel images
-import paving1 from "@/assets/paving-1.jpg";
-import paving2 from "@/assets/paving-2.jpg";
-import paving3 from "@/assets/paving-3.jpg";
-import paving4 from "@/assets/paving-4.jpg";
-import paving5 from "@/assets/paving-5.jpg";
+import paving1 from "@/assets/paving-1.jpeg";
+import paving2 from "@/assets/paving-2.jpeg";
+import paving3 from "@/assets/paving-3.jpeg";
+import paving4 from "@/assets/paving-4.jpeg";
+import paving5 from "@/assets/paving-5.jpeg";
 
 // Plastering carousel images
 import plastering1 from "@/assets/plastering-1.jpeg";
