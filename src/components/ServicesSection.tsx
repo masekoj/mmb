@@ -26,11 +26,11 @@ import decking4 from "@/assets/decking-4.jpeg";
 import decking5 from "@/assets/decking-5.jpeg";
 
 // Roofing carousel images
-import roofing1 from "@/assets/roofing-1.jpg";
-import roofing2 from "@/assets/roofing-2.jpg";
-import roofing3 from "@/assets/roofing-3.jpg";
-import roofing4 from "@/assets/roofing-4.jpg";
-import roofing5 from "@/assets/roofing-5.jpg";
+import roofing1 from "@/assets/roofing-1.jpeg";
+import roofing2 from "@/assets/roofing-2.jpeg";
+import roofing3 from "@/assets/roofing-3.jpeg";
+import roofing4 from "@/assets/roofing-4.jpeg";
+import roofing5 from "@/assets/roofing-5.jpeg";
 
 // Painting carousel images
 import painting1 from "@/assets/painting-1.jpeg";
