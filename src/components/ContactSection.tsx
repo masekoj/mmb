@@ -29,7 +29,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Location",
-    details: ["Western cape, South Africa"],
+    details: ["Knysna, Western cape, South Africa"],
     action: null,
   },
   {
