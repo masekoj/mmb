@@ -110,11 +110,11 @@ import tiling4 from "@/assets/tiling-4.jpeg";
 import tiling5 from "@/assets/tiling-5.jpeg";
 
 // T&G Flooring carousel images
-import tgFlooring1 from "@/assets/tg-flooring-1.jpg";
-import tgFlooring2 from "@/assets/tg-flooring-2.jpg";
-import tgFlooring3 from "@/assets/tg-flooring-3.jpg";
-import tgFlooring4 from "@/assets/tg-flooring-4.jpg";
-import tgFlooring5 from "@/assets/tg-flooring-5.jpg";
+import tgFlooring1 from "@/assets/tg-flooring-1.jpeg";
+import tgFlooring2 from "@/assets/tg-flooring-2.jpeg";
+import tgFlooring3 from "@/assets/tg-flooring-3.jpeg";
+import tgFlooring4 from "@/assets/tg-flooring-4.jpeg";
+import tgFlooring5 from "@/assets/tg-flooring-5.jpeg";
 
 // Day bed carousel images
 import daybed1 from "@/assets/daybed-1.jpeg";
@@ -135,7 +135,7 @@ import plasteringAfter from "@/assets/plastering-after.jpg";
 import showerBefore from "@/assets/shower-before.jpg";
 import showerAfter from "@/assets/shower-after.jpg";
 import tgFlooringBefore from "@/assets/tg-flooring-before.jpg";
-import tgFlooringAfter from "@/assets/tg-flooring-after.jpg";
+import tgFlooringAfter from "@/assets/tg-flooring-after.jpeg";
 import daybedBefore from "@/assets/daybed-before.jpeg";
 import daybedAfter from "@/assets/daybed-after.jpeg";
 
