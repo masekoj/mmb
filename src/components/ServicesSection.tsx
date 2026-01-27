@@ -127,7 +127,7 @@ import daybed5 from "@/assets/daybed-5.jpeg";
 import paintingBefore from "@/assets/painting-before.jpeg";
 import paintingAfter from "@/assets/painting-after.jpeg";
 import tilingBefore from "@/assets/tiling-before.jpeg";
-import tilingAfter from "@/assets/tiling-after.jpg";
+import tilingAfter from "@/assets/tiling-after.jpeg";
 import pavingBefore from "@/assets/paving-before.jpg";
 import pavingAfter from "@/assets/paving-after.jpg";
 import plasteringBefore from "@/assets/plastering-before.jpg";
