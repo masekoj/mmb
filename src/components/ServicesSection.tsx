@@ -109,6 +109,36 @@ import tiling3 from "@/assets/tiling-3.jpeg";
 import tiling4 from "@/assets/tiling-4.jpeg";
 import tiling5 from "@/assets/tiling-5.jpeg";
 
+// T&G Flooring carousel images
+import tgFlooring1 from "@/assets/tg-flooring-1.jpg";
+import tgFlooring2 from "@/assets/tg-flooring-2.jpg";
+import tgFlooring3 from "@/assets/tg-flooring-3.jpg";
+import tgFlooring4 from "@/assets/tg-flooring-4.jpg";
+import tgFlooring5 from "@/assets/tg-flooring-5.jpg";
+
+// Day bed carousel images
+import daybed1 from "@/assets/daybed-1.jpg";
+import daybed2 from "@/assets/daybed-2.jpg";
+import daybed3 from "@/assets/daybed-3.jpg";
+import daybed4 from "@/assets/daybed-4.jpg";
+import daybed5 from "@/assets/daybed-5.jpg";
+
+// Before & After images
+import paintingBefore from "@/assets/painting-before.jpg";
+import paintingAfter from "@/assets/painting-after.jpg";
+import tilingBefore from "@/assets/tiling-before.jpg";
+import tilingAfter from "@/assets/tiling-after.jpg";
+import pavingBefore from "@/assets/paving-before.jpg";
+import pavingAfter from "@/assets/paving-after.jpg";
+import plasteringBefore from "@/assets/plastering-before.jpg";
+import plasteringAfter from "@/assets/plastering-after.jpg";
+import showerBefore from "@/assets/shower-before.jpg";
+import showerAfter from "@/assets/shower-after.jpg";
+import tgFlooringBefore from "@/assets/tg-flooring-before.jpg";
+import tgFlooringAfter from "@/assets/tg-flooring-after.jpg";
+import daybedBefore from "@/assets/daybed-before.jpg";
+import daybedAfter from "@/assets/daybed-after.jpg";
+
 const masonryImages = [masonry1, masonry2, masonry3, masonry4, masonry5];
 const timberImages = [timber1, timber2, timber3, timber4, timber5];
 const deckingImages = [decking1, decking2, decking3, decking4, decking5];
@@ -124,8 +154,20 @@ const showerImages = [shower1, shower2, shower3, shower4, shower5];
 const pavingImages = [paving1, paving2, paving3, paving4, paving5];
 const plasteringImages = [plastering1, plastering2, plastering3, plastering4, plastering5];
 const tilingImages = [tiling1, tiling2, tiling3, tiling4, tiling5];
+const tgFlooringImages = [tgFlooring1, tgFlooring2, tgFlooring3, tgFlooring4, tgFlooring5];
+const daybedImages = [daybed1, daybed2, daybed3, daybed4, daybed5];
 
-const services = [
+interface ServiceType {
+  title: string;
+  description: string;
+  carouselImages: string[];
+  beforeAfter?: {
+    before: string;
+    after: string;
+  };
+}
+
+const services: ServiceType[] = [
   {
     title: "Masonry Building",
     description:
@@ -155,6 +197,10 @@ const services = [
     description:
       "Professional interior and exterior painting services. Refresh your property with a perfect finish.",
     carouselImages: paintingImages,
+    beforeAfter: {
+      before: paintingBefore,
+      after: paintingAfter,
+    },
   },
   {
     title: "Waterproofing",
@@ -197,24 +243,60 @@ const services = [
     description:
       "Complete shower installation and bathroom renovations. Modern glass enclosures and quality fixtures.",
     carouselImages: showerImages,
+    beforeAfter: {
+      before: showerBefore,
+      after: showerAfter,
+    },
   },
   {
     title: "Paving",
     description:
       "Professional brick paving for driveways, patios, and walkways. Beautiful, durable outdoor surfaces.",
     carouselImages: pavingImages,
+    beforeAfter: {
+      before: pavingBefore,
+      after: pavingAfter,
+    },
   },
   {
     title: "Plastering",
     description:
       "Expert plastering and rendering services for interior and exterior walls. Quality finishes every time.",
     carouselImages: plasteringImages,
+    beforeAfter: {
+      before: plasteringBefore,
+      after: plasteringAfter,
+    },
   },
   {
     title: "Tiling",
     description:
       "Professional tile installation for floors, walls, and backsplashes. Precision work with stunning results.",
     carouselImages: tilingImages,
+    beforeAfter: {
+      before: tilingBefore,
+      after: tilingAfter,
+    },
+  },
+  {
+    title: "T&G Flooring",
+    description:
+      "Premium tongue and groove wooden flooring installation. Beautiful, durable hardwood floors for a warm, elegant finish.",
+    carouselImages: tgFlooringImages,
+    beforeAfter: {
+      before: tgFlooringBefore,
+      after: tgFlooringAfter,
+    },
+  },
+  {
+    title: "Day Bed",
+    description:
+      "Custom-built day beds for outdoor living spaces. Beautiful wooden construction with comfortable cushioning for relaxation.",
+    carouselImages: daybedImages,
+    beforeAfter: {
+      before: daybedBefore,
+      after: daybedAfter,
+    },
   },
 ];
 
@@ -285,6 +367,69 @@ const ServiceCarousel = ({ images, title }: { images: string[]; title: string })
   );
 };
 
+// Before & After Comparison Component
+const BeforeAfterComparison = ({ before, after, title }: { before: string; after: string; title: string }) => {
+  const [showAfter, setShowAfter] = useState(false);
+
+  return (
+    <div className="mt-4 p-4 bg-muted/50 rounded-xl">
+      <h4 className="text-center font-bold text-foreground mb-3 text-sm uppercase tracking-wider">
+        See the Transformation
+      </h4>
+      
+      {/* Desktop: Side by side */}
+      <div className="hidden md:flex gap-2 relative">
+        <div className="flex-1 relative group/before">
+          <img 
+            src={before} 
+            alt={`${title} before`}
+            className="w-full h-40 object-cover rounded-lg transition-transform duration-300 group-hover/before:scale-[1.02]"
+          />
+          <span className="absolute top-2 left-2 px-2 py-1 bg-destructive/90 text-destructive-foreground text-xs font-bold rounded uppercase">
+            Before
+          </span>
+        </div>
+        
+        {/* Divider */}
+        <div className="w-px bg-border self-stretch" />
+        
+        <div className="flex-1 relative group/after">
+          <img 
+            src={after} 
+            alt={`${title} after`}
+            className="w-full h-40 object-cover rounded-lg transition-transform duration-300 group-hover/after:scale-[1.02]"
+          />
+          <span className="absolute top-2 left-2 px-2 py-1 bg-green-600/90 text-white text-xs font-bold rounded uppercase">
+            After
+          </span>
+        </div>
+      </div>
+
+      {/* Mobile: Tap to toggle */}
+      <div 
+        className="md:hidden relative cursor-pointer"
+        onClick={() => setShowAfter(!showAfter)}
+      >
+        <div className="relative overflow-hidden rounded-lg">
+          <img 
+            src={showAfter ? after : before}
+            alt={`${title} ${showAfter ? 'after' : 'before'}`}
+            className="w-full h-48 object-cover transition-all duration-500"
+          />
+          <span className={`absolute top-2 left-2 px-2 py-1 text-white text-xs font-bold rounded uppercase transition-colors ${
+            showAfter ? 'bg-green-600/90' : 'bg-destructive/90'
+          }`}>
+            {showAfter ? 'After' : 'Before'}
+          </span>
+          <span className="absolute bottom-2 right-2 px-2 py-1 bg-foreground/80 text-background text-xs rounded">
+            Tap to toggle
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const ServicesSection = () => {
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
@@ -333,6 +478,15 @@ const ServicesSection = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
+                  
+                  {/* Before & After Section */}
+                  {service.beforeAfter && (
+                    <BeforeAfterComparison 
+                      before={service.beforeAfter.before}
+                      after={service.beforeAfter.after}
+                      title={service.title}
+                    />
+                  )}
                 </CardContent>
               </Card>
             </AnimatedSection>
