@@ -124,7 +124,7 @@ import daybed4 from "@/assets/daybed-4.jpeg";
 import daybed5 from "@/assets/daybed-5.jpeg";
 
 // Before & After images
-import paintingBefore from "@/assets/painting-before.jpg";
+import paintingBefore from "@/assets/painting-before.jpeg";
 import paintingAfter from "@/assets/painting-after.jpeg";
 import tilingBefore from "@/assets/tiling-before.jpeg";
 import tilingAfter from "@/assets/tiling-after.jpg";
