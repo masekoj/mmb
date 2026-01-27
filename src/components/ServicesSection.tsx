@@ -117,11 +117,11 @@ import tgFlooring4 from "@/assets/tg-flooring-4.jpg";
 import tgFlooring5 from "@/assets/tg-flooring-5.jpg";
 
 // Day bed carousel images
-import daybed1 from "@/assets/daybed-1.jpg";
-import daybed2 from "@/assets/daybed-2.jpg";
-import daybed3 from "@/assets/daybed-3.jpg";
-import daybed4 from "@/assets/daybed-4.jpg";
-import daybed5 from "@/assets/daybed-5.jpg";
+import daybed1 from "@/assets/daybed-1.jpeg";
+import daybed2 from "@/assets/daybed-2.jpeg";
+import daybed3 from "@/assets/daybed-3.jpeg";
+import daybed4 from "@/assets/daybed-4.jpeg";
+import daybed5 from "@/assets/daybed-5.jpeg";
 
 // Before & After images
 import paintingBefore from "@/assets/painting-before.jpg";
