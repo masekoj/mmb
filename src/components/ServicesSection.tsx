@@ -136,8 +136,8 @@ import showerBefore from "@/assets/shower-before.jpg";
 import showerAfter from "@/assets/shower-after.jpg";
 import tgFlooringBefore from "@/assets/tg-flooring-before.jpg";
 import tgFlooringAfter from "@/assets/tg-flooring-after.jpg";
-import daybedBefore from "@/assets/daybed-before.jpg";
-import daybedAfter from "@/assets/daybed-after.jpg";
+import daybedBefore from "@/assets/daybed-before.jpeg";
+import daybedAfter from "@/assets/daybed-after.jpeg";
 
 const masonryImages = [masonry1, masonry2, masonry3, masonry4, masonry5];
 const timberImages = [timber1, timber2, timber3, timber4, timber5];
