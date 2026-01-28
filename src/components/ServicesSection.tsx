@@ -54,11 +54,11 @@ import alterations4 from "@/assets/alterations-4.jpg";
 import alterations5 from "@/assets/alterations-5.jpg";
 
 // Skimming carousel images
-import skimming1 from "@/assets/skimming-1.jpg";
-import skimming2 from "@/assets/skimming-2.jpg";
+import skimming1 from "@/assets/skimming-1.jpeg";
+import skimming2 from "@/assets/skimming-2.jpeg";
 import skimming3 from "@/assets/skimming-3.jpg";
-import skimming4 from "@/assets/skimming-4.jpg";
-import skimming5 from "@/assets/skimming-5.jpg";
+import skimming4 from "@/assets/skimming-4.jpeg";
+import skimming5 from "@/assets/skimming-5.jpeg";
 
 // Stonework carousel images
 import stonework1 from "@/assets/stonework-1.jpeg";
