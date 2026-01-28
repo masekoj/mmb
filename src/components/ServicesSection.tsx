@@ -47,11 +47,11 @@ import waterproofing4 from "@/assets/waterproofing-4.jpeg";
 import waterproofing5 from "@/assets/waterproofing-5.jpeg";
 
 // Alterations carousel images
-import alterations1 from "@/assets/alterations-1.jpg";
-import alterations2 from "@/assets/alterations-2.jpg";
-import alterations3 from "@/assets/alterations-3.jpg";
-import alterations4 from "@/assets/alterations-4.jpg";
-import alterations5 from "@/assets/alterations-5.jpg";
+import alterations1 from "@/assets/alterations-1.jpeg";
+import alterations2 from "@/assets/alterations-2.jpeg";
+import alterations3 from "@/assets/alterations-3.jpeg";
+import alterations4 from "@/assets/alterations-4.jpeg";
+import alterations5 from "@/assets/alterations-5.jpeg";
 
 // Skimming carousel images
 import skimming1 from "@/assets/skimming-1.jpeg";
