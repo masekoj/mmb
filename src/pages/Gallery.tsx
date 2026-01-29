@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BottomNavBar from "@/components/BottomNavBar";
 
 // Import all project images
 import masonry1 from "@/assets/masonry-1.jpeg";
@@ -152,9 +153,9 @@ const Gallery = () => {
         />
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background pb-20 lg:pb-0">
         <Header />
-        
+        <BottomNavBar />
         <main className="pt-24 pb-16">
           <div className="container mx-auto px-4">
             {/* Header */}

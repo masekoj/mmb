@@ -8,6 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import StepFormContact from "@/components/StepFormContact";
 import Footer from "@/components/Footer";
+import BottomNavBar from "@/components/BottomNavBar";
 
 const Index = () => {
   return (
@@ -25,7 +26,7 @@ const Index = () => {
         <link rel="canonical" href="https://masekobuilders.co.za" />
       </Helmet>
 
-      <div className="min-h-screen">
+      <div className="min-h-screen pb-20 lg:pb-0">
         <Header />
         <main>
           <HeroSection />
@@ -37,6 +38,7 @@ const Index = () => {
           <StepFormContact />
         </main>
         <Footer />
+        <BottomNavBar />
       </div>
     </>
   );

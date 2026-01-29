@@ -15,10 +15,14 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      // Auto-close mobile menu on scroll
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isMenuOpen]);
 
   const navLinks = [
     { href: "#home", label: "Home" },
