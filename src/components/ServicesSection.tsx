@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
@@ -138,6 +139,10 @@ import tgFlooringBefore from "@/assets/tg-flooring-before.jpg";
 import tgFlooringAfter from "@/assets/tg-flooring-after.jpeg";
 import daybedBefore from "@/assets/daybed-before.jpeg";
 import daybedAfter from "@/assets/daybed-after.jpeg";
+import vinylBefore from "@/assets/vinyl-before.jpg";
+import vinylAfter from "@/assets/vinyl-after.jpg";
+import skimmingBefore from "@/assets/skimming-before.jpg";
+import skimmingAfter from "@/assets/skimming-after.jpg";
 
 const masonryImages = [masonry1, masonry2, masonry3, masonry4, masonry5];
 const timberImages = [timber1, timber2, timber3, timber4, timber5];
@@ -219,6 +224,10 @@ const services: ServiceType[] = [
     description:
       "Professional wall and ceiling skimming for a smooth, flawless finish. Prepare surfaces perfectly for painting.",
     carouselImages: skimmingImages,
+    beforeAfter: {
+      before: skimmingBefore,
+      after: skimmingAfter,
+    },
   },
   {
     title: "Stonework",
@@ -231,6 +240,10 @@ const services: ServiceType[] = [
     description:
       "Modern luxury vinyl flooring installation. Durable, waterproof, and stylish flooring solutions for any room.",
     carouselImages: vinylImages,
+    beforeAfter: {
+      before: vinylBefore,
+      after: vinylAfter,
+    },
   },
   {
     title: "Staircase Installation",
@@ -318,17 +331,24 @@ const ServiceCarousel = ({ images, title }: { images: string[]; title: string })
   }, [nextSlide]);
 
   return (
-    <div className="relative h-56 overflow-hidden group/carousel">
+    <motion.div 
+      className="relative h-56 overflow-hidden group/carousel"
+      whileHover="hover"
+    >
       {images.map((img, idx) => (
-        <img
+        <motion.img
           key={idx}
           src={img}
           alt={`${title} project ${idx + 1}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out ${
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
             idx === currentIndex 
-              ? "opacity-100 scale-100" 
-              : "opacity-0 scale-105"
+              ? "opacity-100" 
+              : "opacity-0"
           }`}
+          variants={{
+            hover: { scale: 1.1 }
+          }}
+          transition={{ duration: 0.4 }}
         />
       ))}
       
@@ -363,7 +383,7 @@ const ServiceCarousel = ({ images, title }: { images: string[]; title: string })
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -459,14 +479,23 @@ const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
-            <AnimatedSection 
-              key={index} 
-              animation="scaleUp" 
-              delay={index * 100}
-              duration={800}
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.08,
+                ease: "easeOut",
+              }}
+              whileHover={{ 
+                scale: 1.03,
+                transition: { duration: 0.3 }
+              }}
             >
               <Card
-                className="group overflow-hidden border border-border/30 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.03] hover:border-secondary/40 transition-all duration-500 ease-out bg-card h-full"
+                className="group overflow-hidden border border-border/30 rounded-2xl shadow-lg hover:shadow-2xl hover:border-secondary/40 transition-shadow duration-500 ease-out bg-card h-full"
               >
                 {/* Carousel */}
                 <ServiceCarousel images={service.carouselImages} title={service.title} />
@@ -489,7 +518,7 @@ const ServicesSection = () => {
                   )}
                 </CardContent>
               </Card>
-            </AnimatedSection>
+            </motion.div>
           ))}
         </div>
 
