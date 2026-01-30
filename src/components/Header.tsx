@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import logo from "@/assets/logo-new.jpeg";
 import MarqueeBar from "./MarqueeBar";
 import SocialIcons from "./SocialIcons";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -24,19 +28,60 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isMenuOpen]);
 
+  // Close search on escape key
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsSearchOpen(false);
+        setSearchQuery("");
+      }
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#services", label: "Services" },
     { href: "#projects", label: "Projects" },
     { href: "/gallery", label: "Gallery", isRoute: true },
     { href: "#about", label: "About" },
+    { href: "#faq", label: "FAQs" },
     { href: "#contact", label: "Contact" },
   ];
+
+  const searchableItems = [
+    { label: "Home", href: "#home" },
+    { label: "Services", href: "#services" },
+    { label: "Masonry Building", href: "#services" },
+    { label: "Timber Homes", href: "#services" },
+    { label: "Decking", href: "#services" },
+    { label: "Roofing", href: "#services" },
+    { label: "Painting", href: "#services" },
+    { label: "Waterproofing", href: "#services" },
+    { label: "Projects", href: "#projects" },
+    { label: "Portfolio", href: "#projects" },
+    { label: "Gallery", href: "/gallery", isRoute: true },
+    { label: "About Us", href: "#about" },
+    { label: "FAQs", href: "#faq" },
+    { label: "Frequently Asked Questions", href: "#faq" },
+    { label: "Contact", href: "#contact" },
+    { label: "Get Quote", href: "#contact" },
+    { label: "Testimonials", href: "#testimonials" },
+  ];
+
+  const filteredItems = searchQuery.trim()
+    ? searchableItems.filter((item) =>
+        item.label.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
 
   const scrollToSection = (href: string, isRoute?: boolean) => {
     if (isRoute) {
       navigate(href);
       setIsMenuOpen(false);
+      setIsSearchOpen(false);
+      setSearchQuery("");
       return;
     }
     
@@ -57,10 +102,84 @@ const Header = () => {
       }
     }
     setIsMenuOpen(false);
+    setIsSearchOpen(false);
+    setSearchQuery("");
   };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Full-screen Search Overlay */}
+      <AnimatePresence>
+        {isSearchOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-primary/95 backdrop-blur-xl"
+          >
+            <div className="container mx-auto px-4 pt-20">
+              <div className="max-w-2xl mx-auto">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="flex-1 relative">
+                    <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-primary-foreground/50" />
+                    <Input
+                      type="text"
+                      placeholder="Search the website..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      autoFocus
+                      className="w-full h-14 pl-12 pr-4 text-lg bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 rounded-xl focus:ring-accent"
+                    />
+                  </div>
+                  <Button
+                    variant="nav"
+                    size="icon"
+                    onClick={() => {
+                      setIsSearchOpen(false);
+                      setSearchQuery("");
+                    }}
+                    className="h-14 w-14"
+                  >
+                    <X className="w-6 h-6" />
+                  </Button>
+                </div>
+
+                {/* Search Results */}
+                {filteredItems.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="space-y-2"
+                  >
+                    {filteredItems.map((item, index) => (
+                      <button
+                        key={index}
+                        onClick={() => scrollToSection(item.href, item.isRoute)}
+                        className="w-full text-left px-4 py-3 rounded-lg bg-primary-foreground/5 hover:bg-primary-foreground/10 text-primary-foreground transition-colors"
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+
+                {searchQuery.trim() && filteredItems.length === 0 && (
+                  <p className="text-center text-primary-foreground/60 py-8">
+                    No results found for "{searchQuery}"
+                  </p>
+                )}
+
+                {!searchQuery.trim() && (
+                  <p className="text-center text-primary-foreground/40 py-8">
+                    Start typing to search...
+                  </p>
+                )}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Main Header */}
       <div
         className={`transition-all duration-300 ${
@@ -102,6 +221,14 @@ const Header = () => {
 
             {/* Desktop CTA & Social */}
             <div className="hidden lg:flex items-center gap-4">
+              <Button
+                variant="nav"
+                size="icon"
+                onClick={() => setIsSearchOpen(true)}
+                aria-label="Search"
+              >
+                <Search className="w-5 h-5" />
+              </Button>
               <SocialIcons size="sm" variant="header" />
               <a
                 href="tel:+27732718226"
@@ -119,16 +246,25 @@ const Header = () => {
               </Button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <Button
-              variant="nav"
-              size="icon"
-              className="lg:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </Button>
+            {/* Mobile: Search + Menu Buttons */}
+            <div className="flex items-center gap-2 lg:hidden">
+              <Button
+                variant="nav"
+                size="icon"
+                onClick={() => setIsSearchOpen(true)}
+                aria-label="Search"
+              >
+                <Search className="w-5 h-5" />
+              </Button>
+              <Button
+                variant="nav"
+                size="icon"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </Button>
+            </div>
           </div>
 
           {/* Mobile Navigation */}

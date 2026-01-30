@@ -17,11 +17,11 @@ const Index = () => {
         <title>Maseko Master Builders & Waterproofing | Quality Construction in South Africa</title>
         <meta
           name="description"
-          content="Maseko Master Builders specializes in masonry building, timber homes, decking, roofing, painting, and waterproofing. 20+ years of quality construction in Gauteng, South Africa."
+          content="Maseko Master Builders specializes in masonry building, timber homes, decking, roofing, painting, and waterproofing. 10+ years of quality construction in Knysna, Western Cape, South Africa."
         />
         <meta
           name="keywords"
-          content="masonry, timber homes, decking, roofing, painting, waterproofing, construction, builders, South Africa, Gauteng"
+          content="masonry, timber homes, decking, roofing, painting, waterproofing, construction, builders, South Africa, Knysna, Western Cape"
         />
         <link rel="canonical" href="https://masekobuilders.co.za" />
       </Helmet>

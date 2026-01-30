@@ -9,7 +9,6 @@ import Index from "./pages/Index";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 import PageTransition from "./components/PageTransition";
-import FloatingFAQButton from "./components/FloatingFAQButton";
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingContactButtons from "./components/FloatingContactButtons";
 
@@ -50,7 +49,6 @@ const App = () => (
         <Sonner />
         <BrowserRouter basename="/mmb">
           <AnimatedRoutes />
-          <FloatingFAQButton />
           <ScrollToTop />
           <FloatingContactButtons />
         </BrowserRouter>

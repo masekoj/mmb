@@ -4,7 +4,7 @@ import AnimatedSection from "./AnimatedSection";
 const stats = [
   { icon: Users, value: "500+", label: "Happy Clients" },
   { icon: Building, value: "750+", label: "Projects Completed" },
-  { icon: Trophy, value: "20+", label: "Years Experience" },
+  { icon: Trophy, value: "10+", label: "Years Experience" },
 ];
 
 const features = [
