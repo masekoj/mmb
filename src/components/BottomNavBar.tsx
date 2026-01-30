@@ -51,9 +51,9 @@ const BottomNavBar = () => {
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       className="fixed bottom-0 left-0 right-0 z-50 lg:hidden"
     >
-      {/* Glassmorphism background */}
-      <div className="bg-primary/95 backdrop-blur-xl border-t border-primary-foreground/10 shadow-[0_-4px_30px_rgba(0,0,0,0.3)]">
-        <div className="flex items-center justify-around px-2 py-2 max-w-lg mx-auto">
+      {/* Glassmorphism background with subtle top border */}
+      <div className="bg-primary/60 backdrop-blur-xl border-t border-primary-foreground/10" style={{ borderTopWidth: '0.5px' }}>
+        <div className="flex items-center justify-around px-2 py-1.5 max-w-lg mx-auto">
           {navItems.map((item) => {
             const Icon = item.icon;
             const active = isActive(item);
@@ -62,26 +62,23 @@ const BottomNavBar = () => {
               <motion.button
                 key={item.id}
                 onClick={() => handleNavClick(item.href, item.isRoute)}
-                whileTap={{ scale: 0.9 }}
-                className={`flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-xl transition-all duration-300 min-w-[60px] ${
+                whileTap={{ scale: 0.95 }}
+                className={`flex flex-col items-center justify-center gap-0.5 px-2 py-1 transition-all duration-300 min-w-[50px] ${
                   active
-                    ? "bg-accent text-accent-foreground"
-                    : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10"
+                    ? "text-accent"
+                    : "text-primary-foreground/60 hover:text-primary-foreground"
                 }`}
               >
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className="relative"
-                >
-                  <Icon className="w-5 h-5" />
+                <div className="relative">
+                  <Icon className="w-4 h-4" strokeWidth={1.5} />
                   {active && (
                     <motion.div
                       layoutId="activeIndicator"
-                      className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent-foreground rounded-full"
+                      className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent rounded-full"
                     />
                   )}
-                </motion.div>
-                <span className="text-[10px] font-medium tracking-wide">
+                </div>
+                <span className="text-[10px] uppercase tracking-[1px] font-medium">
                   {item.label}
                 </span>
               </motion.button>
@@ -91,7 +88,7 @@ const BottomNavBar = () => {
       </div>
 
       {/* Safe area padding for iOS */}
-      <div className="bg-primary/95 h-[env(safe-area-inset-bottom)]" />
+      <div className="bg-primary/60 backdrop-blur-xl h-[env(safe-area-inset-bottom)]" />
     </motion.nav>
   );
 };

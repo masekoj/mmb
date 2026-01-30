@@ -129,7 +129,7 @@ const Footer = () => {
               <li className="flex items-start gap-3 group">
                 <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <span className="text-primary-foreground/80 text-sm">
-                  Western Cape, South Africa
+                  Knysna, Western Cape, South Africa
                 </span>
               </li>
               <li className="flex items-start gap-3 group">
