@@ -5,11 +5,11 @@ import useEmblaCarousel from "embla-carousel-react";
 import AnimatedSection from "./AnimatedSection";
 
 // Import all project images
-import serviceMasonry from "@/assets/service-masonry.jpg";
-import serviceTimber from "@/assets/service-timber.jpg";
-import serviceDecking from "@/assets/service-decking.jpg";
-import serviceRoofing from "@/assets/service-roofing.jpg";
-import servicePainting from "@/assets/service-painting.jpg";
+import serviceMasonry from "@/assets/service-masonry.jpeg";
+import serviceTimber from "@/assets/service-timber.jpeg";
+import serviceDecking from "@/assets/service-decking.jpeg";
+import serviceRoofing from "@/assets/service-roofing.jpeg";
+import servicePainting from "@/assets/service-painting.jpeg";
 import serviceWaterproofing from "@/assets/service-waterproofing.jpg";
 import tgFlooring1 from "@/assets/tg-flooring-1.jpeg";
 import daybed1 from "@/assets/daybed-1.jpeg";
