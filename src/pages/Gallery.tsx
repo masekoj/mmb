@@ -63,7 +63,7 @@ import staircase3 from "@/assets/staircase-3.jpeg";
 import staircase4 from "@/assets/staircase-4.jpeg";
 import staircase5 from "@/assets/staircase-5.jpeg";
 import shower1 from "@/assets/shower-1.jpg";
-import shower2 from "@/assets/shower-2.jpg";
+import shower2 from "@/assets/shower-2.jpeg";
 import shower3 from "@/assets/shower-3.jpg";
 import shower4 from "@/assets/shower-4.jpg";
 import shower5 from "@/assets/shower-5.jpg";
