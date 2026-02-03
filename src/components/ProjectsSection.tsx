@@ -10,7 +10,7 @@ import serviceTimber from "@/assets/service-timber.jpeg";
 import serviceDecking from "@/assets/service-decking.jpeg";
 import serviceRoofing from "@/assets/service-roofing.jpeg";
 import servicePainting from "@/assets/service-painting.jpeg";
-import serviceWaterproofing from "@/assets/service-waterproofing.jpg";
+import serviceWaterproofing from "@/assets/service-waterproofing.jpeg";
 import tgFlooring1 from "@/assets/tg-flooring-1.jpeg";
 import daybed1 from "@/assets/daybed-1.jpeg";
 import tiling1 from "@/assets/tiling-1.jpeg";
