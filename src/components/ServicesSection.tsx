@@ -84,7 +84,7 @@ import staircase5 from "@/assets/staircase-5.jpeg";
 
 // Shower installation carousel images
 import shower1 from "@/assets/shower-1.jpg";
-import shower2 from "@/assets/shower-2.jpg";
+import shower2 from "@/assets/shower-2.jpeg";
 import shower3 from "@/assets/shower-3.jpg";
 import shower4 from "@/assets/shower-4.jpg";
 import shower5 from "@/assets/shower-5.jpg";
@@ -133,14 +133,14 @@ import pavingBefore from "@/assets/paving-before.jpeg";
 import pavingAfter from "@/assets/paving-after.jpeg";
 import plasteringBefore from "@/assets/plastering-before.jpeg";
 import plasteringAfter from "@/assets/plastering-after.jpeg";
-import showerBefore from "@/assets/shower-before.jpg";
-import showerAfter from "@/assets/shower-after.jpg";
+import showerBefore from "@/assets/shower-before.jpeg";
+import showerAfter from "@/assets/shower-after.jpeg";
 import tgFlooringBefore from "@/assets/tg-flooring-before.jpg";
 import tgFlooringAfter from "@/assets/tg-flooring-after.jpeg";
 import daybedBefore from "@/assets/daybed-before.jpeg";
 import daybedAfter from "@/assets/daybed-after.jpeg";
-import vinylBefore from "@/assets/vinyl-before.jpg";
-import vinylAfter from "@/assets/vinyl-after.jpg";
+import vinylBefore from "@/assets/vinyl-before.jpeg";
+import vinylAfter from "@/assets/vinyl-after.jpeg";
 import skimmingBefore from "@/assets/skimming-before.jpg";
 import skimmingAfter from "@/assets/skimming-after.jpg";
 
