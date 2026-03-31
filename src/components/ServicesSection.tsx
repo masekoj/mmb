@@ -168,6 +168,7 @@ const plasteringImages = [plastering1, plastering2, plastering3, plastering4, pl
 const tilingImages = [tiling1, tiling2, tiling3, tiling4, tiling5];
 const tgFlooringImages = [tgFlooring1, tgFlooring2, tgFlooring3, tgFlooring4, tgFlooring5];
 const daybedImages = [daybed1, daybed2, daybed3, daybed4, daybed5];
+const poolImages = [pool1, pool2, pool3, pool4, pool5];
 
 interface ServiceType {
   title: string;
