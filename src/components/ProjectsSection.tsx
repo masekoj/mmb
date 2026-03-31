@@ -161,6 +161,14 @@ const projects: Project[] = [
     description: "Complete home renovation including layout changes and extensions.",
     featured: true,
   },
+  {
+    id: 18,
+    title: "Swimming Pool Build",
+    category: "Swimming Pool",
+    image: pool1,
+    description: "Complete swimming pool construction with stone cladding and tiled coping in Knysna.",
+    featured: true,
+  },
 ];
 
 const ProjectsSection = () => {

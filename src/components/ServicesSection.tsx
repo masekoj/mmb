@@ -319,6 +319,12 @@ const services: ServiceType[] = [
       after: daybedAfter,
     },
   },
+  {
+    title: "Swimming Pool",
+    description:
+      "Professional swimming pool construction and renovation. From excavation to finishing, we build durable pools with quality craftsmanship.",
+    carouselImages: poolImages,
+  },
 ];
 
 // Service Carousel Component

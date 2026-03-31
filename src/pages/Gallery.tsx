@@ -124,6 +124,7 @@ const categories: GalleryCategory[] = [
   { name: "Tiling", images: [tiling1, tiling2, tiling3, tiling4, tiling5] },
   { name: "T&G Flooring", images: [tgFlooring1, tgFlooring2, tgFlooring3, tgFlooring4, tgFlooring5] },
   { name: "Day Bed", images: [daybed1, daybed2, daybed3, daybed4, daybed5] },
+  { name: "Swimming Pool", images: [pool1, pool2, pool3, pool4, pool5, pool6, pool7] },
 ];
 
 // Combine all images for "All" category
