@@ -92,6 +92,13 @@ import daybed2 from "@/assets/daybed-2.jpeg";
 import daybed3 from "@/assets/daybed-3.jpeg";
 import daybed4 from "@/assets/daybed-4.jpeg";
 import daybed5 from "@/assets/daybed-5.jpeg";
+import pool1 from "@/assets/pool-1.jpeg";
+import pool2 from "@/assets/pool-2.jpeg";
+import pool3 from "@/assets/pool-3.jpeg";
+import pool4 from "@/assets/pool-4.jpeg";
+import pool5 from "@/assets/pool-5.jpeg";
+import pool6 from "@/assets/pool-6.jpeg";
+import pool7 from "@/assets/pool-7.jpeg";
 
 interface GalleryCategory {
   name: string;
@@ -117,6 +124,7 @@ const categories: GalleryCategory[] = [
   { name: "Tiling", images: [tiling1, tiling2, tiling3, tiling4, tiling5] },
   { name: "T&G Flooring", images: [tgFlooring1, tgFlooring2, tgFlooring3, tgFlooring4, tgFlooring5] },
   { name: "Day Bed", images: [daybed1, daybed2, daybed3, daybed4, daybed5] },
+  { name: "Swimming Pool", images: [pool1, pool2, pool3, pool4, pool5, pool6, pool7] },
 ];
 
 // Combine all images for "All" category

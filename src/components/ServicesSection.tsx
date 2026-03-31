@@ -124,6 +124,13 @@ import daybed3 from "@/assets/daybed-3.jpeg";
 import daybed4 from "@/assets/daybed-4.jpeg";
 import daybed5 from "@/assets/daybed-5.jpeg";
 
+// Swimming pool carousel images
+import pool1 from "@/assets/pool-1.jpeg";
+import pool2 from "@/assets/pool-2.jpeg";
+import pool3 from "@/assets/pool-3.jpeg";
+import pool4 from "@/assets/pool-4.jpeg";
+import pool5 from "@/assets/pool-5.jpeg";
+
 // Before & After images
 import paintingBefore from "@/assets/painting-before.jpeg";
 import paintingAfter from "@/assets/painting-after.jpeg";
@@ -161,6 +168,7 @@ const plasteringImages = [plastering1, plastering2, plastering3, plastering4, pl
 const tilingImages = [tiling1, tiling2, tiling3, tiling4, tiling5];
 const tgFlooringImages = [tgFlooring1, tgFlooring2, tgFlooring3, tgFlooring4, tgFlooring5];
 const daybedImages = [daybed1, daybed2, daybed3, daybed4, daybed5];
+const poolImages = [pool1, pool2, pool3, pool4, pool5];
 
 interface ServiceType {
   title: string;
@@ -310,6 +318,12 @@ const services: ServiceType[] = [
       before: daybedBefore,
       after: daybedAfter,
     },
+  },
+  {
+    title: "Swimming Pool",
+    description:
+      "Professional swimming pool construction and renovation. From excavation to finishing, we build durable pools with quality craftsmanship.",
+    carouselImages: poolImages,
   },
 ];
 

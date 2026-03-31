@@ -22,6 +22,7 @@ import shower1 from "@/assets/shower-1.jpg";
 import stonework1 from "@/assets/stonework-1.jpeg";
 import skimming1 from "@/assets/skimming-1.jpeg";
 import alterations1 from "@/assets/alterations-1.jpeg";
+import pool1 from "@/assets/pool-1.jpeg";
 
 interface Project {
   id: number;
@@ -158,6 +159,14 @@ const projects: Project[] = [
     category: "Alterations",
     image: alterations1,
     description: "Complete home renovation including layout changes and extensions.",
+    featured: true,
+  },
+  {
+    id: 18,
+    title: "Swimming Pool Build",
+    category: "Swimming Pool",
+    image: pool1,
+    description: "Complete swimming pool construction with stone cladding and tiled coping in Knysna.",
     featured: true,
   },
 ];
