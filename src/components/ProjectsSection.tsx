@@ -22,6 +22,7 @@ import shower1 from "@/assets/shower-1.jpg";
 import stonework1 from "@/assets/stonework-1.jpeg";
 import skimming1 from "@/assets/skimming-1.jpeg";
 import alterations1 from "@/assets/alterations-1.jpeg";
+import pool1 from "@/assets/pool-1.jpeg";
 
 interface Project {
   id: number;
